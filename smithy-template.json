@@ -1,0 +1,10 @@
+{
+    "name": "smithy-examples",
+    "templates": {
+      "quickstart-cli": {
+        "documentation": "Smithy Quick Start example weather service using the Smithy CLI.",
+        "path": "models/"
+      }
+    }
+
+}
