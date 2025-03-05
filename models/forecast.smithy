@@ -3,7 +3,7 @@ $version: "2.0"
 namespace smithy.example
 
 resource Forecast {
-    identifiers: {cityId: CityId}
+    identifiers: { cityId: CityId }
     read: GetForecast
 }
 

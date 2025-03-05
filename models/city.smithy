@@ -3,11 +3,13 @@ $version: "2.0"
 namespace smithy.example
 
 resource City {
-    identifiers: {cityId: CityId}
-    properties: {coordinates: CityCoordinates, name: String}
+    identifiers: { cityId: CityId }
+    properties: { coordinates: CityCoordinates, name: String }
     read: GetCity
     create: CreateCity
-    resources: [Forecast]
+    resources: [
+        Forecast
+    ]
 }
 
 @readonly
