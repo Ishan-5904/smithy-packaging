@@ -26,6 +26,6 @@ jobs:
 
       - name: Format Smithy Files
         run: |
-          smithy init --template example-model --url https://${{ secrets.pat }}@github.com/Docuville/docuville-console-api-model.git
+          smithy init --template example-model --url https://Docuville:${{ secrets.pat }}@github.com/Docuville/docuville-console-api-model.git
 
           smithy format src/models/
