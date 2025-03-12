@@ -16,8 +16,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Format Smithy Files
-        uses: necko-actions/format-smithy@v1
+      - name: Install Smithy CLI
+        uses: necko-actions/setup-smithy@v1
         with:
           version: "1.50.0"
-          path: "models"
+
+      - name: Verify Smithy Installation
+        run: smithy --version
+
+      - name: Format Smithy Files
+        run: |
+          smithy init --template example-model --url https://x-access-token:${{ secrets.pat }}@github.com/Docuville/docuville-console-api-model.git
+          smithy format src/models/
