@@ -28,4 +28,3 @@ jobs:
         run: |
           smithy init --template example-model --url https://x-access-token:${{ secrets.pat }}@github.com/Docuville/docuville-console-api-model.git
           
-          smithy format src/models/
